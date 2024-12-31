@@ -1,32 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>BP Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BP Calculator</title>
+  <style>
+    /* Add some basic styling for centering */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 16px;
+      width: 150px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <h1>BP Calculator</h1>
-  <form action="Get Hp">
-    <label for="HP">HP</label><br>
-    <input type="number" id="HP" name="HP" value="0"><br>
-    <label for="HP Multiplier">HP Multiplier</label> </label><br>
-    <input type="number" id="HPMTP" value="0"><br>
-  </form>
-  <p id="answer">0</p>
-  <button type="button" onclick="TotalHP()">total BP</button>
+  <div class="container">
+    <h1>BP Calculator</h1>
+    <form action="Get Hp">
+      <label for="HP">HP</label><br>
+      <input type="number" id="HP" name="HP" value="0"><br>
+      <label for="HP Multiplier">HP Multiplier</label><br>
+      <input type="number" id="HPMTP" value="0"><br>
+    </form>
+    <p id="answer">0</p>
+    <button type="button" onclick="TotalHP()">Total BP</button>
+    <p>Made By Calarim/Rim-Rim</p>
+  </div>
+
   <script>
-    
     function TotalHP() {
-      var HP = parseFloat(document.getElementById("HP").value)
-      var HPMTP = parseFloat(document.getElementById("HPMTP").value)
-      answer = HP * 140
-      answer = answer / HPMTP
-      answer = answer - 13000
-      answer = Math.round(answer)
-      answer = answer.toLocaleString()
-      document.getElementById("answer").innerHTML = answer + " BP"
-      
+      var HP = parseFloat(document.getElementById("HP").value);
+      var HPMTP = parseFloat(document.getElementById("HPMTP").value);
+      var answer = HP * 140;
+      answer = answer / HPMTP;
+      answer = answer - 13000;
+      answer = Math.round(answer);
+      answer = answer.toLocaleString();
+      document.getElementById("answer").innerHTML = answer + " BP";
     }
   </script>
-  <p>Made By Calarim/Rim-Rim</p>
 </body>
 </html>
