@@ -14,14 +14,17 @@
   <p id="answer">0</p>
   <button type="button" onclick="TotalHP()">total BP</button>
   <script>
+    
     function TotalHP() {
-      var HP = parseFloat(document.getElementById("HP").value);
-      var HPMTP = parseFloat(document.getElementById("HPMTP").value);
-      answer = HP * 140;
-      answer = answer / HPMTP;
-      answer = answer - 13000;
+      var HP = parseFloat(document.getElementById("HP").value)
+      var HPMTP = parseFloat(document.getElementById("HPMTP").value)
+      answer = HP * 140
+      answer = answer / HPMTP
+      answer = answer - 13000
       answer = Math.round(answer)
-      document.getElementById("answer").innerHTML = answer;
+      answer = answer.toLocaleString()
+      document.getElementById("answer").innerHTML = answer + " BP"
+      
     }
   </script>
   <p>Made By Calarim/Rim-Rim</p>
