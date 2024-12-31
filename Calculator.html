@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BP Calculator</title>
+</head>
+<body>
+  <h1>BP Calculator</h1>
+  <form action="Get Hp">
+    <label for="HP">HP</label><br>
+    <input type="number" id="HP" name="HP" value="0"><br>
+    <label for="HP Multiplier">HP Multiplier</label> </label><br>
+    <input type="number" id="HPMTP" value="0"><br>
+  </form>
+  <p id="answer">0</p>
+  <button type="button" onclick="TotalHP()">total BP</button>
+  <script>
+    function TotalHP() {
+      var HP = parseFloat(document.getElementById("HP").value);
+      var HPMTP = parseFloat(document.getElementById("HPMTP").value);
+      answer = HP * 140;
+      answer = answer / HPMTP;
+      answer = answer - 13000;
+      answer = Math.round(answer)
+      document.getElementById("answer").innerHTML = answer;
+    }
+  </script>
+  <p>Made By Calarim/Rim-Rim</p>
+</body>
+</html>
